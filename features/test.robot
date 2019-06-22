@@ -9,5 +9,3 @@ ${URL}  http://testdevlab.com
 TC_001 Browser Start and Close with several browsers
     Open Browser  ${URL}  ${Browser}
     Maximize browser window
-
-
