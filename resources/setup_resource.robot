@@ -1,5 +1,3 @@
-*** Settings ***
-
 *** Variables ***
 ${Browser}   Chrome
 ${URL}   http://testdevlab.com
@@ -35,9 +33,6 @@ ${h3_automation}  xpath://div[@class='solutions-intro-grid']//h3[contains(text()
 ${h3_security}  xpath://div[@class='solutions-intro-grid']//h3[contains(text(), 'Security')]
 ${h3_battery}  xpath://div[@class='solutions-intro-grid']//h3[contains(text(), 'Battery')]
 ${feeback_row}  css:.scrollable-feedback-row
-
-
-
 
 *** Keywords ***
 Open Browser to Homepage
@@ -94,7 +89,3 @@ Page contains customer feedbacks
     page should contain  What our customers say
     page should contain element  ${feeback_row}
     close browser
-
-
-
-

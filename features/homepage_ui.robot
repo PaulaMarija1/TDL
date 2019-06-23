@@ -13,7 +13,6 @@ ${seb}  class:client c-seb
 ${worldremit}  css:.c-worldremit
 ${skype}  css:.c-skype
 
-
 *** Test Cases ***
 TC_002 Checking homepage header (Platforms) section
     [Documentation]  User hovers over "Platforms" and validates UI
@@ -84,12 +83,3 @@ Clients-Partners Awards page opens
     location should be  https://www.testdevlab.com/clients-partners-awards
     title should be  Clients, Partners & Awards - TestDevLab
     close browser
-
-
-
-
-
-
-
-
-
