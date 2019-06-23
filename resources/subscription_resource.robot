@@ -1,20 +1,9 @@
 *** Variables ***
-${Browser}   Chrome
-${URL}   http://testdevlab.com
-${tdl_logo}   css:.tdl-logo.dark
 ${email}    name:email
 ${success}  class:form-field-success-msg
 ${error}    class:form-field-error-msg
 
 *** Keywords ***
-Open Homepage
-    open browser  ${URL}  ${Browser}
-    maximize browser window
-    Page has opened
-
-Page has opened
-    title should be  TestDevLab - We are experts in Software Quality Assurance
-    page should contain element  ${tdl_logo}
 
 Input valid email
     [Arguments]    ${email}

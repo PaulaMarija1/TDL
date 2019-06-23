@@ -1,7 +1,4 @@
 *** Variables ***
-${Browser}   Chrome
-${URL}   http://testdevlab.com
-${tdl_logo}   css:.tdl-logo.dark
 ${platforms}  xpath://div[contains(text(),'Platforms')]
 ${solutions}  xpath://div[contains(text(),'Solutions')]
 ${products}  xpath://div[contains(text(),'Products')]
@@ -35,14 +32,6 @@ ${h3_battery}  xpath://div[@class='solutions-intro-grid']//h3[contains(text(), '
 ${feeback_row}  css:.scrollable-feedback-row
 
 *** Keywords ***
-Open Browser to Homepage
-    open browser  ${URL}  ${Browser}
-    maximize browser window
-    Homepage Should be Open
-
-Homepage Should be Open
-    title should be  TestDevLab - We are experts in Software Quality Assurance
-    page should contain element  ${tdl_logo}
 
 Testing Solutions Are Visible
     page should contain element  ${Mobile_application_testing}  ${Web_application_testing}
