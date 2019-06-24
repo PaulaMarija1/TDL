@@ -19,15 +19,12 @@ Input empty email
 
 Success notification is visible
     wait until page contains element  ${success}
-    close browser
 
 Error notification is visible
     wait until page contains element  ${error}
-    close browser
 
 Subscription title visible
     page should contain  Subscription to our newsletter
 
 Subscription text is visible
     page should contain  Sign up for our newsletter to get regular updates and insights into our solutions, technologies and latest findings in the world of quality assurance and software development.
-    close browser
