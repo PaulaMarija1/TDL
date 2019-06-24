@@ -2,7 +2,10 @@
 Library   Selenium2Library
 Resource  ../resources/homepage_resource.robot
 Resource  ../resources/test_setup_resource.robot
+Resource  ../resources/test_teardown_resource.robot
 Test Setup  Open Homepage
+Test Teardown  Exit Browser
+
 
 *** Variables ***
 ${Platforms}    xpath://div[contains(text(),'Platforms')]
@@ -17,70 +20,84 @@ ${microsoft}  xpath://a[@class="logo microsoft"]
 ${truecaller}  xpath://a[@class="logo truecaller"]
 
 *** Test Cases ***
-TC_002 Checking homepage header (Platforms) section
+TC_002
     [Documentation]  User hovers over "Platforms" and validates UI
+    [Tags]  smoke
     Hover over the Platforms header
     Testing Solutions Are Visible
 
-TC_003 Checking homepage header (Solutions) section
+TC_003
     [Documentation]  User hovers over "Solutions" and validates UI
+    [Tags]  smoke
     Hover over the Solutions header
     Right Solutions Are Visible
 
-TC_004 Checking homepage header (Products) section
+TC_004
     [Documentation]  User hovers over "Products" and validates UI
+    [Tags]  smoke
     Hover over the Products header
     TDL Tools Are Visible
 
-TC_005 Checking homepage header (Company) section
+TC_005
     [Documentation]  User hovers over "Company" and validates UI
+    [Tags]  smoke
     Hover over the Company header
     Company information is Visible
 
-TC_006 Navigate to clients-partners-awards page from twilio
+TC_006
     [Documentation]  Click on twilio and navigate to page
+    [Tags]  regression
     Click on twilio logo
     Clients-Partners Awards page opens
 
-TC_007 Navigate to clients-partners-awards page from skype
+TC_007
     [Documentation]  Click on skype and navigate to page
+    [Tags]  regression
     Click on skype logo
     Clients-Partners Awards page opens
 
-TC_008 Navigate to clients-partners-awards page from truecaller
+TC_008
     [Documentation]  Click on truecaller and navigate to page
+    [Tags]  regression
     Click on truecaller logo
     Clients-Partners Awards page opens
 
-TC_009 Navigate to clients-partners-awards page from seb
+TC_009
     [Documentation]  Click on seb and navigate to page
+    [Tags]  regression
     Click on seb logo
     Clients-Partners Awards page opens
 
-TC_010 Navigate to clients-partners-awards page from worldremit
+TC_010
     [Documentation]  Click on worldremit and navigate to page
+    [Tags]  regression
     Click on worldremit logo
     Clients-Partners Awards page opens
 
-TC_011 Navigate to clients-partners-awards page from microsoft
+TC_011
     [Documentation]  Click on microsoft and navigate to page
+    [Tags]  regression
     Click on microsoft logo
     Clients-Partners Awards page opens
 
-TC_012 Homepage contains platform info
+TC_012
     [Documentation]  Under platforms section page contains information about platforms
+    [Tags]  smoke
     Page contains platform info
 
-TC_013 Homepage contains solutions info
+TC_013
     [Documentation]  Under solutions section page contains information about testing solutions
+    [Tags]  smoke
     Page contains solutions info
 
-TC_014 Homepage contains info about testing approach
+TC_014
     [Documentation]  Under approach section page contains information about testing approaches
+    [Tags]  smoke
     Page contains info about testing approach
 
-TC_015 Homepage contains customer feedback
+TC_015
     [Documentation]  Under testimonials section page contains information about customer feedback
+    [Tags]  smoke
      Page contains customer feedbacks
 
 *** Keywords ***
@@ -117,4 +134,3 @@ Click on microsoft logo
 Clients-Partners Awards page opens
     location should be  https://www.testdevlab.com/clients-partners-awards
     title should be  Clients, Partners & Awards - TestDevLab
-    close browser

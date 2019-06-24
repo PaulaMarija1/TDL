@@ -5,10 +5,11 @@
 # IntelliJ project files
 .idea
 *.iml
+*.png
 log.html
 output.xml
 report.html
-debug.log
+*.log
 out
 gen
 results/
