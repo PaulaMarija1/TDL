@@ -23,3 +23,12 @@ Open Contact Us Page
 Contact Us Page Opens
     title should be  TestDevLab - We are experts in Software Quality Assurance
     page should contain element  ${tdl_logo}
+
+Open About-Us Page
+    open browser  ${URL}  ${Browser}
+    maximize browser window
+    Aboutt-Us Should be Open
+
+Aboutt-Us Should be Open
+    title should be  TestDevLab - We are experts in Software Quality Assurance
+    page should contain element  ${tdl_logo}
